@@ -1,0 +1,28 @@
+%plot a sine wave with 50Hz frequency and 10 volt amplitude
+close all;clear all;clc;
+f1=100;f2=60;f3=45;
+t=0:0.05/f1:0.1;
+f1=100;f2=60;
+x1=5*cos(2*pi*f1*t);
+x2=10*sin(2*pi*f2*t);
+figure(1);plot(t,x1);
+figure(2);plot(t,x2);
+figure(3);plot(t,x1+x2);
+%Unit Impluse
+t=-0.5:0.01:0.5;
+x=[zeros(1,20),ones(1,1),zeros(1,80)];
+figure(2);
+stem(t,x);
+%Unit Step
+t=(-0.5:0.01:5);
+x=[zeros(1,40),ones(1,1),zeros(1,80)];
+x=t>=0;
+figure(3);
+stem(t,x);
+ %pulse
+ t=(-0.5:0.01:5);
+ x=[zeros(1,40),ones(1,1),zeros(1,80)];
+ x=t>=0;
+ figure(4);
+stem(t,x);
+ 
